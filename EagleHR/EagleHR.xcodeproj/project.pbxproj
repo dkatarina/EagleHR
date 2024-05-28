@@ -23,11 +23,13 @@
 		5F76A5AA2C0414B1001A7496 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F76A5A92C0414B1001A7496 /* Launch Screen.storyboard */; };
 		5F76A5AC2C041C85001A7496 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5AB2C041C85001A7496 /* AnimatedImage.swift */; };
 		5F76A5AE2C04C3B7001A7496 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5AD2C04C3B7001A7496 /* PostRequest.swift */; };
-		5F76A5B12C04C75A001A7496 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5B02C04C75A001A7496 /* AuthenticatedView.swift */; };
+		5F76A5B12C04C75A001A7496 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5B02C04C75A001A7496 /* NavigationView.swift */; };
 		5F76A5B92C04CDD5001A7496 /* MyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5B82C04CDD5001A7496 /* MyInfoView.swift */; };
 		5F76A5BB2C04CE10001A7496 /* UsedDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5BA2C04CE10001A7496 /* UsedDaysView.swift */; };
 		5F76A5BD2C04CE33001A7496 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5BC2C04CE33001A7496 /* OrganizationView.swift */; };
+		5F76A5C02C0539BA001A7496 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5BF2C0539BA001A7496 /* NavigationViewModel.swift */; };
 		5F76A5D42C063523001A7496 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5D32C063523001A7496 /* LoginViewState.swift */; };
+		5F76A5C22C0542AD001A7496 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5C12C0542AD001A7496 /* BackgroundImage.swift */; };
 		5F7A6A862C0228E5009922FF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A852C0228E5009922FF /* LoginView.swift */; };
 		5F7A6A8C2C027B48009922FF /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A8B2C027B48009922FF /* Dimensions.swift */; };
 		5F7A6A8F2C02809B009922FF /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A8E2C02809B009922FF /* InputTextField.swift */; };
@@ -54,11 +56,13 @@
 		5F76A5A92C0414B1001A7496 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5F76A5AB2C041C85001A7496 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImage.swift; sourceTree = "<group>"; };
 		5F76A5AD2C04C3B7001A7496 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
-		5F76A5B02C04C75A001A7496 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
+		5F76A5B02C04C75A001A7496 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		5F76A5B82C04CDD5001A7496 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
 		5F76A5BA2C04CE10001A7496 /* UsedDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedDaysView.swift; sourceTree = "<group>"; };
 		5F76A5BC2C04CE33001A7496 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
+		5F76A5BF2C0539BA001A7496 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		5F76A5D32C063523001A7496 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
+		5F76A5C12C0542AD001A7496 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
 		5F7A6A852C0228E5009922FF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5F7A6A8B2C027B48009922FF /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		5F7A6A8E2C02809B009922FF /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5F76A5BE2C053550001A7496 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				5F76A5B02C04C75A001A7496 /* NavigationView.swift */,
+				5F76A5BF2C0539BA001A7496 /* NavigationViewModel.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		5F7A6A872C0228FB009922FF /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +179,7 @@
 				5F76A5802C039366001A7496 /* RoundButton.swift */,
 				5F76A5842C039F33001A7496 /* OverlayProgressView.swift */,
 				5F76A5AB2C041C85001A7496 /* AnimatedImage.swift */,
+				5F76A5C12C0542AD001A7496 /* BackgroundImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -207,6 +221,7 @@
 		5FE68A892C0225980011C6C4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5F76A5BE2C053550001A7496 /* Navigation */,
 				5F7A6A872C0228FB009922FF /* Login */,
 				5F7A6A882C022923009922FF /* MyInfo */,
 				5F7A6A8A2C02293B009922FF /* UsedDays */,
@@ -216,7 +231,6 @@
 				5F76A5A92C0414B1001A7496 /* Launch Screen.storyboard */,
 				5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */,
 				5F76A59B2C040378001A7496 /* SplashScreen.swift */,
-				5F76A5B02C04C75A001A7496 /* AuthenticatedView.swift */,
 				5F7A6A902C028613009922FF /* View+Ext.swift */,
 				5F7A6A8B2C027B48009922FF /* Dimensions.swift */,
 				5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */,
@@ -309,6 +323,7 @@
 				5F76A5812C039366001A7496 /* RoundButton.swift in Sources */,
 				5F76A5AE2C04C3B7001A7496 /* PostRequest.swift in Sources */,
 				5F76A5D42C063523001A7496 /* LoginViewState.swift in Sources */,
+				5F76A5C02C0539BA001A7496 /* NavigationViewModel.swift in Sources */,
 				5F76A5952C03C29D001A7496 /* ApiError.swift in Sources */,
 				5F7A6A8F2C02809B009922FF /* InputTextField.swift in Sources */,
 				5F76A59A2C03F334001A7496 /* AuthenticationManager.swift in Sources */,
@@ -317,6 +332,7 @@
 				5F76A5932C03BFE3001A7496 /* NetworkRequest.swift in Sources */,
 				5F76A5982C03EB27001A7496 /* KeychainManager.swift in Sources */,
 				5F7A6A862C0228E5009922FF /* LoginView.swift in Sources */,
+				5F76A5C22C0542AD001A7496 /* BackgroundImage.swift in Sources */,
 				5F76A5B92C04CDD5001A7496 /* MyInfoView.swift in Sources */,
 				5F76A58F2C03BCDF001A7496 /* LoginRequest.swift in Sources */,
 				5F76A5AC2C041C85001A7496 /* AnimatedImage.swift in Sources */,
@@ -324,7 +340,7 @@
 				5F76A5872C03A02F001A7496 /* ProcessingResult.swift in Sources */,
 				5F7A6A912C028613009922FF /* View+Ext.swift in Sources */,
 				5F76A57F2C03885E001A7496 /* LoginInput.swift in Sources */,
-				5F76A5B12C04C75A001A7496 /* AuthenticatedView.swift in Sources */,
+				5F76A5B12C04C75A001A7496 /* NavigationView.swift in Sources */,
 				5F76A5BB2C04CE10001A7496 /* UsedDaysView.swift in Sources */,
 				5F76A5912C03BD36001A7496 /* NetworkManager.swift in Sources */,
 				5F76A59C2C040378001A7496 /* SplashScreen.swift in Sources */,

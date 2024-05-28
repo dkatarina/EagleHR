@@ -7,7 +7,9 @@ import SwiftUI
 
 struct MyInfoView: View {
     var body: some View {
-        EmptyView()
         // TODO: implement
+        VStack {
+            Text("My info")
+        }
     }
 }

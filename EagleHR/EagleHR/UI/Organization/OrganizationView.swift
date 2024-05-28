@@ -7,7 +7,9 @@ import SwiftUI
 
 struct OrganizationView: View {
     var body: some View {
-        EmptyView()
         // TODO: implement
+        VStack {
+            Text("Organization")
+        }
     }
 }

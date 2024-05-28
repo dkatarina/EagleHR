@@ -33,7 +33,9 @@ struct AuthenticationManager {
         if (!keychainManager.store(token, key: authorizationTokenKey)) {
             assertionFailure("Failed to save authorization token")
         }
-        isAuthenticated.send(.authenticated)
+        DispatchQueue.main.async {
+            isAuthenticated.send(.authenticated)
+        }
     }
 
     func removeAuthToken() throws {

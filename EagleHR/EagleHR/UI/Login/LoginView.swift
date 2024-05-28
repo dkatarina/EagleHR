@@ -58,7 +58,7 @@ struct LoginView: View {
             }
             OverlayProgressView()
                 .hidden(!viewModel.state.isProgressViewShown)
-        }
+        }.background(BackgroundImage(opacity: 0.3))
     }
 }
 

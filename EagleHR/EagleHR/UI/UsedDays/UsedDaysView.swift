@@ -7,7 +7,9 @@ import SwiftUI
 
 struct UsedDaysView: View {
     var body: some View {
-        EmptyView()
         // TODO: implement
+        VStack {
+            Text("Used days")
+        }
     }
 }

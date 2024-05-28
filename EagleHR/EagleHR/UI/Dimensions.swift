@@ -5,6 +5,8 @@
 import Foundation
 
 enum Dimensions {
+    static let minTouchTarget = 44.0
+    
     static let splashScreenIconSize = 250.0
 
     static let fieldCornerRadius = 10.0

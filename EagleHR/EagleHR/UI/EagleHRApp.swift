@@ -17,16 +17,8 @@ struct EagleHRApp: App {
                     SplashScreen()
                 case .notAuthenticated:
                     LoginView()
-                        .background(
-                            Image(uiImage: UIImage(named: "AppIcon")!)
-                                .scaleEffect(CGSize(width: 1.0, height: 2.0))
-                                .opacity(0.06))
                 case .authenticated:
-                    AuthenticatedView()
-                        .background(
-                            Image(uiImage: UIImage(named: "AppIcon")!)
-                                .scaleEffect(CGSize(width: 1.0, height: 2.0))
-                                .opacity(0.06))
+                    NavigationView()
                 }
             }
             .onReceive(authenticationManager.isAuthenticated) {
