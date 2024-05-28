@@ -28,12 +28,19 @@
 		5F76A5BB2C04CE10001A7496 /* UsedDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5BA2C04CE10001A7496 /* UsedDaysView.swift */; };
 		5F76A5BD2C04CE33001A7496 /* OrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5BC2C04CE33001A7496 /* OrganizationView.swift */; };
 		5F76A5C02C0539BA001A7496 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5BF2C0539BA001A7496 /* NavigationViewModel.swift */; };
-		5F76A5D42C063523001A7496 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5D32C063523001A7496 /* LoginViewState.swift */; };
 		5F76A5C22C0542AD001A7496 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5C12C0542AD001A7496 /* BackgroundImage.swift */; };
+		5F76A5C62C054EE1001A7496 /* DataLoadingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5C52C054EE1001A7496 /* DataLoadingResult.swift */; };
+		5F76A5C92C0612E2001A7496 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 5F76A5C82C0612E2001A7496 /* Collections */; };
+		5F76A5CB2C0612E2001A7496 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 5F76A5CA2C0612E2001A7496 /* OrderedCollections */; };
+		5F76A5CD2C0612E2001A7496 /* _RopeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5F76A5CC2C0612E2001A7496 /* _RopeModule */; };
+		5F76A5D02C06222D001A7496 /* MyInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5CF2C06222D001A7496 /* MyInfoData.swift */; };
+		5F76A5D22C0626F0001A7496 /* MyInfoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5D12C0626F0001A7496 /* MyInfoState.swift */; };
+		5F76A5D42C063523001A7496 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76A5D32C063523001A7496 /* LoginViewState.swift */; };
 		5F7A6A862C0228E5009922FF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A852C0228E5009922FF /* LoginView.swift */; };
 		5F7A6A8C2C027B48009922FF /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A8B2C027B48009922FF /* Dimensions.swift */; };
 		5F7A6A8F2C02809B009922FF /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A8E2C02809B009922FF /* InputTextField.swift */; };
 		5F7A6A912C028613009922FF /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A902C028613009922FF /* View+Ext.swift */; };
+		5FC76F252C064E3E002C1944 /* MyInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F242C064E3E002C1944 /* MyInfoViewModel.swift */; };
 		5FE68A7C2C020BB40011C6C4 /* EagleHRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */; };
 		5FE68A802C020BB50011C6C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */; };
 		5FE68A832C020BB50011C6C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE68A822C020BB50011C6C4 /* Preview Assets.xcassets */; };
@@ -61,12 +68,16 @@
 		5F76A5BA2C04CE10001A7496 /* UsedDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedDaysView.swift; sourceTree = "<group>"; };
 		5F76A5BC2C04CE33001A7496 /* OrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationView.swift; sourceTree = "<group>"; };
 		5F76A5BF2C0539BA001A7496 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
-		5F76A5D32C063523001A7496 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 		5F76A5C12C0542AD001A7496 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
+		5F76A5C52C054EE1001A7496 /* DataLoadingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingResult.swift; sourceTree = "<group>"; };
+		5F76A5CF2C06222D001A7496 /* MyInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoData.swift; sourceTree = "<group>"; };
+		5F76A5D12C0626F0001A7496 /* MyInfoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoState.swift; sourceTree = "<group>"; };
+		5F76A5D32C063523001A7496 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 		5F7A6A852C0228E5009922FF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5F7A6A8B2C027B48009922FF /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		5F7A6A8E2C02809B009922FF /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		5F7A6A902C028613009922FF /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		5FC76F242C064E3E002C1944 /* MyInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewModel.swift; sourceTree = "<group>"; };
 		5FE68A782C020BB40011C6C4 /* EagleHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleHRApp.swift; sourceTree = "<group>"; };
 		5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F76A5CD2C0612E2001A7496 /* _RopeModule in Frameworks */,
+				5F76A5CB2C0612E2001A7496 /* OrderedCollections in Frameworks */,
+				5F76A5C92C0612E2001A7496 /* Collections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +130,7 @@
 			children = (
 				5F76A57C2C037D9F001A7496 /* InputValidator.swift */,
 				5F76A5862C03A02F001A7496 /* ProcessingResult.swift */,
+				5F76A5C52C054EE1001A7496 /* DataLoadingResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +153,15 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		5F76A5CE2C0621F9001A7496 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F76A5CF2C06222D001A7496 /* MyInfoData.swift */,
+				5F76A5D12C0626F0001A7496 /* MyInfoState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5F7A6A872C0228FB009922FF /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +175,9 @@
 		5F7A6A882C022923009922FF /* MyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5F76A5CE2C0621F9001A7496 /* Models */,
 				5F76A5B82C04CDD5001A7496 /* MyInfoView.swift */,
+				5FC76F242C064E3E002C1944 /* MyInfoViewModel.swift */,
 			);
 			path = MyInfo;
 			sourceTree = "<group>";
@@ -265,6 +291,11 @@
 			dependencies = (
 			);
 			name = EagleHR;
+			packageProductDependencies = (
+				5F76A5C82C0612E2001A7496 /* Collections */,
+				5F76A5CA2C0612E2001A7496 /* OrderedCollections */,
+				5F76A5CC2C0612E2001A7496 /* _RopeModule */,
+			);
 			productName = EagleHR;
 			productReference = 5FE68A782C020BB40011C6C4 /* EagleHR.app */;
 			productType = "com.apple.product-type.application";
@@ -293,6 +324,9 @@
 				Base,
 			);
 			mainGroup = 5FE68A6F2C020BB40011C6C4;
+			packageReferences = (
+				5F76A5C72C0612E2001A7496 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 5FE68A792C020BB40011C6C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F76A5C62C054EE1001A7496 /* DataLoadingResult.swift in Sources */,
 				5F76A5812C039366001A7496 /* RoundButton.swift in Sources */,
 				5F76A5AE2C04C3B7001A7496 /* PostRequest.swift in Sources */,
 				5F76A5D42C063523001A7496 /* LoginViewState.swift in Sources */,
@@ -338,13 +373,16 @@
 				5F76A5AC2C041C85001A7496 /* AnimatedImage.swift in Sources */,
 				5F76A57B2C0362C8001A7496 /* LoginViewModel.swift in Sources */,
 				5F76A5872C03A02F001A7496 /* ProcessingResult.swift in Sources */,
+				5FC76F252C064E3E002C1944 /* MyInfoViewModel.swift in Sources */,
 				5F7A6A912C028613009922FF /* View+Ext.swift in Sources */,
 				5F76A57F2C03885E001A7496 /* LoginInput.swift in Sources */,
 				5F76A5B12C04C75A001A7496 /* NavigationView.swift in Sources */,
 				5F76A5BB2C04CE10001A7496 /* UsedDaysView.swift in Sources */,
 				5F76A5912C03BD36001A7496 /* NetworkManager.swift in Sources */,
+				5F76A5D02C06222D001A7496 /* MyInfoData.swift in Sources */,
 				5F76A59C2C040378001A7496 /* SplashScreen.swift in Sources */,
 				5F76A57D2C037D9F001A7496 /* InputValidator.swift in Sources */,
+				5F76A5D22C0626F0001A7496 /* MyInfoState.swift in Sources */,
 				5FE68A7C2C020BB40011C6C4 /* EagleHRApp.swift in Sources */,
 				5F7A6A8C2C027B48009922FF /* Dimensions.swift in Sources */,
 			);
@@ -552,6 +590,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F76A5C72C0612E2001A7496 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F76A5C82C0612E2001A7496 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F76A5C72C0612E2001A7496 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		5F76A5CA2C0612E2001A7496 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F76A5C72C0612E2001A7496 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		5F76A5CC2C0612E2001A7496 /* _RopeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F76A5C72C0612E2001A7496 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = _RopeModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5FE68A702C020BB40011C6C4 /* Project object */;
 }
