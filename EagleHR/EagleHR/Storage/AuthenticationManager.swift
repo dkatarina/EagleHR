@@ -9,7 +9,9 @@ struct AuthenticationManager {
     static let shared = AuthenticationManager()
 
     private let keychainManager = KeychainManager.shared
+    private let defaults = UserDefaults.standard
     private let authorizationTokenKey = "authorizationToken"
+    private let userIdKey = "userId"
 
     let isAuthenticated = CurrentValueSubject<IsAuthenticated, Never>(.checking)
 
@@ -29,6 +31,15 @@ struct AuthenticationManager {
         }
     }
 
+    private func removeAuthToken() {
+        keychainManager.remove(key: authorizationTokenKey)
+        isAuthenticated.send(.notAuthenticated)
+    }
+
+    private func removeUserId() {
+        defaults.removeObject(forKey: userIdKey)
+    }
+
     func saveAuthToken(_ token: String) {
         if (!keychainManager.store(token, key: authorizationTokenKey)) {
             assertionFailure("Failed to save authorization token")
@@ -38,13 +49,21 @@ struct AuthenticationManager {
         }
     }
 
-    func removeAuthToken() throws {
-        keychainManager.remove(key: authorizationTokenKey)
-        isAuthenticated.send(.notAuthenticated)
+    func logout() {
+        removeUserId()
+        removeAuthToken()
     }
 
     func getAuthToken() -> String? {
         keychainManager.get(key: authorizationTokenKey)
+    }
+
+    func saveUserId(_ userId: Int) {
+        defaults.set(userId, forKey: userIdKey)
+    }
+
+    func getUserId() -> Int {
+        defaults.integer(forKey: userIdKey)
     }
 }
 

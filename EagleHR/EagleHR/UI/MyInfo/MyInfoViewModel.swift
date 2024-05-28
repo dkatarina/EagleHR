@@ -3,45 +3,95 @@
 //
 
 import Foundation
-import OrderedCollections
+import Combine
 
 extension MyInfoView {
     @Observable
     class ViewModel {
         private let networkManager = NetworkManager.shared
+        private var cancellables = Set<AnyCancellable>()
+
+        private let authenticationManager = AuthenticationManager.shared
 
         var state = ViewState()
 
         init() {
-            // TODO: implement
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                var mockData = Data()
-                mockData.fields[.firstName]!.value = "Test"
-                mockData.fields[.lastName]!.value = "Testeric"
-                mockData.fields[.dateOfBirth]!.value = "12/07/1993"
-                mockData.fields[.hireDate]!.value = "01/03/2024"
-                mockData.fields[.emailAddress]!.value = "mail@test.com"
-                mockData.fields[.address]!.value = "Test address"
-                mockData.fields[.college]!.value = "Etf"
-                mockData.fields[.phoneNumber]!.value = "064333333"
+            networkManager.requests.getUserInfo.execute()
+                .receive(on: DispatchQueue.main)
+                .sink(
+                    receiveCompletion: { [weak self] completion in
+                        guard let self else {
+                            return
+                        }
 
-                self.state.dataResult = .success(data: mockData)
-            }
+                        if case .failure(_) = completion {
+                            self.state.dataResult = .failure(
+                                DescriptiveError(errorDescription: "Something went wrong.")
+                            )
+                        }
+                    },
+                    receiveValue: { [weak self] userInfoResponse in
+                        guard let self else {
+                            return
+                        }
+
+                        let data = Data.fromUserInfoResponse(userInfoResponse)
+                        self.state.dataResult = .success(data: data)
+                    })
+                .store(in: &cancellables)
         }
 
         func updateInfo() {
-            // TODO: implement
             self.state.updateInfoResult = .processing
+
             let updateFields = self.state.editableData.fields
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                var updatedData = self.state.data
-                updatedData.fields[.emailAddress] = updateFields[.emailAddress]
-                updatedData.fields[.address] = updateFields[.address]
-                updatedData.fields[.college] = updateFields[.college]
-                updatedData.fields[.phoneNumber] = updateFields[.phoneNumber]
-                self.state.data = updatedData
-                self.state.updateInfoResult = .success
-            }
+
+            let isEmailChanged = updateFields[.emailAddress]!.value != self.state.data.fields[.emailAddress]!.value
+
+            let requestBody = UpdateUserInfoRequest.Body(
+                email: updateFields[.emailAddress]!.value,
+                address: updateFields[.address]!.value,
+                phoneNumber: updateFields[.phoneNumber]!.value,
+                college: updateFields[.college]!.value
+            )
+
+            networkManager.requests.updateUserInfo.execute(body: requestBody)
+                .receive(on: DispatchQueue.main)
+                .sink(
+                    receiveCompletion: { [weak self] completion in
+                        guard let self else {
+                            return
+                        }
+
+                        if case .failure(let error) = completion {
+                            self.state.updateInfoResult = .failure(
+                                DescriptiveError(errorDescription: (error as? ApiError)?.message ?? error.localizedDescription)
+                            )
+                        }
+                    },
+                    receiveValue: { [weak self] _ in
+                        guard let self else {
+                            return
+                        }
+
+                        var updatedData = self.state.data
+                        updatedData.fields[.emailAddress] = updateFields[.emailAddress]
+                        updatedData.fields[.address] = updateFields[.address]
+                        updatedData.fields[.college] = updateFields[.college]
+                        updatedData.fields[.phoneNumber] = updateFields[.phoneNumber]
+                        self.state.data = updatedData
+
+                        if isEmailChanged {
+                            self.state.isForceLogoutDialogShown = true
+                        }
+
+                        self.state.updateInfoResult = .success
+                    })
+                .store(in: &cancellables)
+        }
+
+        func logout() {
+            authenticationManager.logout()
         }
     }
 }

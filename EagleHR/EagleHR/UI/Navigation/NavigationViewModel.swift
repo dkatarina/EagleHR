@@ -15,11 +15,7 @@ extension NavigationView {
         static let tabs = ["My Info", "Used Days", "Organization"]
 
         func logout() {
-            do {
-                try authenticationManager.removeAuthToken()
-            } catch {
-                assertionFailure("Failed to logout")
-            }
+            authenticationManager.logout()
         }
     }
 }

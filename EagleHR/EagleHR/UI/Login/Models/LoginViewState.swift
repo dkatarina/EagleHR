@@ -20,7 +20,7 @@ extension LoginView {
             placeholder: "Email",
             iconName: "envelope.fill",
             validator: InputValidator(
-                regexPattern: "[\\w\\-\\.]+@([\\w\\-]+\\.)+[\\w\\-]{2,4}",
+                regexPattern: RegexPattern.email,
                 invalidMsg: "Invalid email"
             )
         )
@@ -29,7 +29,7 @@ extension LoginView {
             placeholder: "Password",
             iconName: "key.fill",
             validator: InputValidator(
-                regexPattern: ".{8,}",
+                regexPattern: RegexPattern.password,
                 invalidMsg: "Minimum password length is 8"
             )
         )

@@ -5,14 +5,14 @@
 import Foundation
 import Combine
 
-protocol PostRequest<RequestBody> : NetworkRequest {
+protocol PatchRequest<RequestBody> : NetworkRequest {
     associatedtype RequestBody: Encodable
 
     func execute(body: RequestBody) -> AnyPublisher<NetworkResponse, Error>
 }
 
-extension PostRequest {
-    func _execute(_ body: RequestBody) -> AnyPublisher<NetworkResponse, Error> {
+extension PatchRequest {
+    func execute(body: RequestBody) -> AnyPublisher<NetworkResponse, Error> {
         do {
             let request = try createRequest(body)
             return execute(request)
@@ -23,7 +23,7 @@ extension PostRequest {
     }
 
     private func createRequest(_ body: RequestBody) throws -> URLRequest {
-        var request = try createRequest(httpMethod: .post)
+        var request = try createRequest(httpMethod: .patch)
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
         let data = try encoder.encode(body)

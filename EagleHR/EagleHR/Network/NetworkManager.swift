@@ -14,5 +14,7 @@ class NetworkManager {
 
     struct Requests {
         let login = LoginRequest()
+        let getUserInfo = GetUserInfoRequest()
+        let updateUserInfo = UpdateUserInfoRequest()
     }
 }

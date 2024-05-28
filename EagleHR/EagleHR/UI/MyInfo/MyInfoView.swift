@@ -31,7 +31,7 @@ struct MyInfoView: View {
                     }.listRowBackground(
                         RoundedRectangle(cornerRadius: 10.0)
                             .fill(.white)
-                            .stroke(Color(.black), lineWidth: 2.0)
+                            .stroke(Color(.gray), lineWidth: 2.0)
                     )
                 }.listRowSpacing(20.0)
                     .scrollContentBackground(.hidden)
@@ -51,6 +51,16 @@ struct MyInfoView: View {
                 error: viewModel.state.error
             ) {
                 Button("OK", role: .cancel) {}
+            }
+            .alert(
+                "Logout",
+                isPresented: $viewModel.state.isForceLogoutDialogShown
+            ) {
+                Button("Ok", role: .destructive) {
+                    viewModel.logout()
+                }
+            } message: {
+                Text("Please login again due to email change.")
             }
             if (viewModel.state.isProgressViewShown) {
                 OverlayProgressView()

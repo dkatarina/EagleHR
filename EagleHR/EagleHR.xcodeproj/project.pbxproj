@@ -41,6 +41,10 @@
 		5F7A6A8F2C02809B009922FF /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A8E2C02809B009922FF /* InputTextField.swift */; };
 		5F7A6A912C028613009922FF /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A6A902C028613009922FF /* View+Ext.swift */; };
 		5FC76F252C064E3E002C1944 /* MyInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F242C064E3E002C1944 /* MyInfoViewModel.swift */; };
+		5FC76F272C064ED0002C1944 /* GetUserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F262C064ED0002C1944 /* GetUserInfoRequest.swift */; };
+		5FC76F292C064EDE002C1944 /* UpdateUserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F282C064EDE002C1944 /* UpdateUserInfoRequest.swift */; };
+		5FC76F2B2C064F97002C1944 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F2A2C064F97002C1944 /* GetRequest.swift */; };
+		5FC76F2F2C0696E9002C1944 /* PatchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F2E2C0696E9002C1944 /* PatchRequest.swift */; };
 		5FE68A7C2C020BB40011C6C4 /* EagleHRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */; };
 		5FE68A802C020BB50011C6C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */; };
 		5FE68A832C020BB50011C6C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE68A822C020BB50011C6C4 /* Preview Assets.xcassets */; };
@@ -78,6 +82,10 @@
 		5F7A6A8E2C02809B009922FF /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		5F7A6A902C028613009922FF /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		5FC76F242C064E3E002C1944 /* MyInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewModel.swift; sourceTree = "<group>"; };
+		5FC76F262C064ED0002C1944 /* GetUserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfoRequest.swift; sourceTree = "<group>"; };
+		5FC76F282C064EDE002C1944 /* UpdateUserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoRequest.swift; sourceTree = "<group>"; };
+		5FC76F2A2C064F97002C1944 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
+		5FC76F2E2C0696E9002C1944 /* PatchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchRequest.swift; sourceTree = "<group>"; };
 		5FE68A782C020BB40011C6C4 /* EagleHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleHRApp.swift; sourceTree = "<group>"; };
 		5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +111,8 @@
 			children = (
 				5F76A5AF2C04C3DC001A7496 /* Definition */,
 				5F76A58E2C03BCDF001A7496 /* LoginRequest.swift */,
+				5FC76F262C064ED0002C1944 /* GetUserInfoRequest.swift */,
+				5FC76F282C064EDE002C1944 /* UpdateUserInfoRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -121,6 +131,8 @@
 			children = (
 				5F76A5922C03BFE3001A7496 /* NetworkRequest.swift */,
 				5F76A5AD2C04C3B7001A7496 /* PostRequest.swift */,
+				5FC76F2A2C064F97002C1944 /* GetRequest.swift */,
+				5FC76F2E2C0696E9002C1944 /* PatchRequest.swift */,
 			);
 			path = Definition;
 			sourceTree = "<group>";
@@ -357,6 +369,7 @@
 				5F76A5C62C054EE1001A7496 /* DataLoadingResult.swift in Sources */,
 				5F76A5812C039366001A7496 /* RoundButton.swift in Sources */,
 				5F76A5AE2C04C3B7001A7496 /* PostRequest.swift in Sources */,
+				5FC76F292C064EDE002C1944 /* UpdateUserInfoRequest.swift in Sources */,
 				5F76A5D42C063523001A7496 /* LoginViewState.swift in Sources */,
 				5F76A5C02C0539BA001A7496 /* NavigationViewModel.swift in Sources */,
 				5F76A5952C03C29D001A7496 /* ApiError.swift in Sources */,
@@ -366,6 +379,7 @@
 				5F76A5BD2C04CE33001A7496 /* OrganizationView.swift in Sources */,
 				5F76A5932C03BFE3001A7496 /* NetworkRequest.swift in Sources */,
 				5F76A5982C03EB27001A7496 /* KeychainManager.swift in Sources */,
+				5FC76F272C064ED0002C1944 /* GetUserInfoRequest.swift in Sources */,
 				5F7A6A862C0228E5009922FF /* LoginView.swift in Sources */,
 				5F76A5C22C0542AD001A7496 /* BackgroundImage.swift in Sources */,
 				5F76A5B92C04CDD5001A7496 /* MyInfoView.swift in Sources */,
@@ -374,6 +388,7 @@
 				5F76A57B2C0362C8001A7496 /* LoginViewModel.swift in Sources */,
 				5F76A5872C03A02F001A7496 /* ProcessingResult.swift in Sources */,
 				5FC76F252C064E3E002C1944 /* MyInfoViewModel.swift in Sources */,
+				5FC76F2B2C064F97002C1944 /* GetRequest.swift in Sources */,
 				5F7A6A912C028613009922FF /* View+Ext.swift in Sources */,
 				5F76A57F2C03885E001A7496 /* LoginInput.swift in Sources */,
 				5F76A5B12C04C75A001A7496 /* NavigationView.swift in Sources */,
@@ -381,6 +396,7 @@
 				5F76A5912C03BD36001A7496 /* NetworkManager.swift in Sources */,
 				5F76A5D02C06222D001A7496 /* MyInfoData.swift in Sources */,
 				5F76A59C2C040378001A7496 /* SplashScreen.swift in Sources */,
+				5FC76F2F2C0696E9002C1944 /* PatchRequest.swift in Sources */,
 				5F76A57D2C037D9F001A7496 /* InputValidator.swift in Sources */,
 				5F76A5D22C0626F0001A7496 /* MyInfoState.swift in Sources */,
 				5FE68A7C2C020BB40011C6C4 /* EagleHRApp.swift in Sources */,

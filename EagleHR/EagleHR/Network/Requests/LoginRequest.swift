@@ -15,9 +15,9 @@ struct LoginRequest : PostRequest {
 
     private let authenticationManager = AuthenticationManager.shared
 
-    func execute(body: Body?) -> AnyPublisher<Response, Error> {
+    func execute(body: Body) -> AnyPublisher<Response, Error> {
         _execute(body)
-            .handleEvents(receiveOutput: storeAuthToken)
+            .handleEvents(receiveOutput: storeAuthData)
             .mapError { failure in
                 let code = (failure as? ApiError)?.code
                 return if code == 401 {
@@ -28,10 +28,9 @@ struct LoginRequest : PostRequest {
             }.eraseToAnyPublisher()
     }
 
-    private func storeAuthToken(loginResponse: NetworkResponse) {
-        if let token = loginResponse.token {
-            authenticationManager.saveAuthToken(token)
-        }
+    private func storeAuthData(loginResponse: NetworkResponse) {
+        authenticationManager.saveAuthToken(loginResponse.token)
+        authenticationManager.saveUserId(loginResponse.userId)
     }
 }
 
@@ -42,7 +41,12 @@ extension LoginRequest {
     }
 
     struct Response : Decodable {
-        let token: String?
-        let message: String?
+        let token: String
+        let userId: Int
+
+        enum CodingKeys : String, CodingKey {
+            case token
+            case userId = "id"
+        }
     }
 }

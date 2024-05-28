@@ -26,3 +26,9 @@ struct InputValidator {
         }
     }
 }
+
+enum RegexPattern {
+    static let email = "[\\w\\-\\.]+@([\\w\\-]+\\.)+[\\w\\-]{2,4}"
+    static let password = ".{8,}"
+}
+
