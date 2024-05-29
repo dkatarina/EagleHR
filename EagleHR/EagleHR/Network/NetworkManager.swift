@@ -16,5 +16,6 @@ class NetworkManager {
         let login = LoginRequest()
         let getUserInfo = GetUserInfoRequest()
         let updateUserInfo = UpdateUserInfoRequest()
+        let getAllUsers = GetAllUsersRequest()
     }
 }

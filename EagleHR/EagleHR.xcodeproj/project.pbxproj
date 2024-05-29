@@ -45,6 +45,11 @@
 		5FC76F292C064EDE002C1944 /* UpdateUserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F282C064EDE002C1944 /* UpdateUserInfoRequest.swift */; };
 		5FC76F2B2C064F97002C1944 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F2A2C064F97002C1944 /* GetRequest.swift */; };
 		5FC76F2F2C0696E9002C1944 /* PatchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F2E2C0696E9002C1944 /* PatchRequest.swift */; };
+		5FC76F312C06A025002C1944 /* OrganizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F302C06A025002C1944 /* OrganizationViewModel.swift */; };
+		5FC76F342C06A075002C1944 /* OrganizationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F332C06A075002C1944 /* OrganizationState.swift */; };
+		5FC76F362C06A0DB002C1944 /* OrganizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F352C06A0DB002C1944 /* OrganizationData.swift */; };
+		5FC76F382C06A238002C1944 /* GetAllUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F372C06A238002C1944 /* GetAllUsersRequest.swift */; };
+		5FC76F3A2C06A3FC002C1944 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F392C06A3FC002C1944 /* DateFormatting.swift */; };
 		5FE68A7C2C020BB40011C6C4 /* EagleHRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */; };
 		5FE68A802C020BB50011C6C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */; };
 		5FE68A832C020BB50011C6C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE68A822C020BB50011C6C4 /* Preview Assets.xcassets */; };
@@ -86,6 +91,11 @@
 		5FC76F282C064EDE002C1944 /* UpdateUserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoRequest.swift; sourceTree = "<group>"; };
 		5FC76F2A2C064F97002C1944 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
 		5FC76F2E2C0696E9002C1944 /* PatchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchRequest.swift; sourceTree = "<group>"; };
+		5FC76F302C06A025002C1944 /* OrganizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewModel.swift; sourceTree = "<group>"; };
+		5FC76F332C06A075002C1944 /* OrganizationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationState.swift; sourceTree = "<group>"; };
+		5FC76F352C06A0DB002C1944 /* OrganizationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationData.swift; sourceTree = "<group>"; };
+		5FC76F372C06A238002C1944 /* GetAllUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllUsersRequest.swift; sourceTree = "<group>"; };
+		5FC76F392C06A3FC002C1944 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		5FE68A782C020BB40011C6C4 /* EagleHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleHRApp.swift; sourceTree = "<group>"; };
 		5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 				5F76A58E2C03BCDF001A7496 /* LoginRequest.swift */,
 				5FC76F262C064ED0002C1944 /* GetUserInfoRequest.swift */,
 				5FC76F282C064EDE002C1944 /* UpdateUserInfoRequest.swift */,
+				5FC76F372C06A238002C1944 /* GetAllUsersRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -197,7 +208,9 @@
 		5F7A6A892C022935009922FF /* Organization */ = {
 			isa = PBXGroup;
 			children = (
+				5FC76F322C06A067002C1944 /* Models */,
 				5F76A5BC2C04CE33001A7496 /* OrganizationView.swift */,
+				5FC76F302C06A025002C1944 /* OrganizationViewModel.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -220,6 +233,15 @@
 				5F76A5C12C0542AD001A7496 /* BackgroundImage.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5FC76F322C06A067002C1944 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5FC76F332C06A075002C1944 /* OrganizationState.swift */,
+				5FC76F352C06A0DB002C1944 /* OrganizationData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5FE68A6F2C020BB40011C6C4 = {
@@ -273,6 +295,7 @@
 				5F7A6A8B2C027B48009922FF /* Dimensions.swift */,
 				5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */,
 				5FE68A812C020BB50011C6C4 /* Preview Content */,
+				5FC76F392C06A3FC002C1944 /* DateFormatting.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -373,6 +396,7 @@
 				5F76A5D42C063523001A7496 /* LoginViewState.swift in Sources */,
 				5F76A5C02C0539BA001A7496 /* NavigationViewModel.swift in Sources */,
 				5F76A5952C03C29D001A7496 /* ApiError.swift in Sources */,
+				5FC76F312C06A025002C1944 /* OrganizationViewModel.swift in Sources */,
 				5F7A6A8F2C02809B009922FF /* InputTextField.swift in Sources */,
 				5F76A59A2C03F334001A7496 /* AuthenticationManager.swift in Sources */,
 				5F76A5852C039F33001A7496 /* OverlayProgressView.swift in Sources */,
@@ -381,6 +405,8 @@
 				5F76A5982C03EB27001A7496 /* KeychainManager.swift in Sources */,
 				5FC76F272C064ED0002C1944 /* GetUserInfoRequest.swift in Sources */,
 				5F7A6A862C0228E5009922FF /* LoginView.swift in Sources */,
+				5FC76F362C06A0DB002C1944 /* OrganizationData.swift in Sources */,
+				5FC76F3A2C06A3FC002C1944 /* DateFormatting.swift in Sources */,
 				5F76A5C22C0542AD001A7496 /* BackgroundImage.swift in Sources */,
 				5F76A5B92C04CDD5001A7496 /* MyInfoView.swift in Sources */,
 				5F76A58F2C03BCDF001A7496 /* LoginRequest.swift in Sources */,
@@ -399,6 +425,8 @@
 				5FC76F2F2C0696E9002C1944 /* PatchRequest.swift in Sources */,
 				5F76A57D2C037D9F001A7496 /* InputValidator.swift in Sources */,
 				5F76A5D22C0626F0001A7496 /* MyInfoState.swift in Sources */,
+				5FC76F382C06A238002C1944 /* GetAllUsersRequest.swift in Sources */,
+				5FC76F342C06A075002C1944 /* OrganizationState.swift in Sources */,
 				5FE68A7C2C020BB40011C6C4 /* EagleHRApp.swift in Sources */,
 				5F7A6A8C2C027B48009922FF /* Dimensions.swift in Sources */,
 			);

@@ -20,22 +20,12 @@ extension MyInfoView {
         }
 
         static func fromUserInfoResponse(_ userInfoResponse: GetUserInfoRequest.Response) -> Data {
-            func toUserFriendlyDateFormat(_ dateString: String) -> String {
-                var userFriendlyDateFormatter = DateFormatter()
-                userFriendlyDateFormatter.dateFormat = "dd/mm/yyyy"
-
-                var responseDateFormatter = DateFormatter()
-                responseDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-
-                return userFriendlyDateFormatter.string(from: responseDateFormatter.date(from: userInfoResponse.dateOfBirth)!)
-            }
-
             var data = Data()
 
             data.fields[.firstName]!.value = userInfoResponse.firstName
             data.fields[.lastName]!.value = userInfoResponse.lastName
-            data.fields[.dateOfBirth]!.value = toUserFriendlyDateFormat(userInfoResponse.dateOfBirth)
-            data.fields[.hireDate]!.value = toUserFriendlyDateFormat(userInfoResponse.hireDate)
+            data.fields[.dateOfBirth]!.value = DateFormatting.toUserFriendlyDateFormat(userInfoResponse.dateOfBirth)
+            data.fields[.hireDate]!.value = DateFormatting.toUserFriendlyDateFormat(userInfoResponse.hireDate)
 
             data.fields[.emailAddress]!.value = userInfoResponse.email
             data.fields[.address]!.value = userInfoResponse.address
