@@ -10,7 +10,11 @@ struct BackgroundImage : View {
 
     var body: some View {
         Image(uiImage: UIImage(named: "AppIcon")!)
-            .scaleEffect(CGSize(width: 1.2, height: 2.1))
+            .scaleEffect(CGSize(width: 1.8, height: 1.5))
             .opacity(opacity)
     }
+}
+
+#Preview {
+    BackgroundImage(opacity: 0.2)
 }

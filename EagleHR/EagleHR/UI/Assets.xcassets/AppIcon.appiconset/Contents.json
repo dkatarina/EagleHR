@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "eagleHR-icon.png",
+      "filename" : "AppIcon.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
