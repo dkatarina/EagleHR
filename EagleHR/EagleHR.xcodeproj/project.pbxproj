@@ -315,10 +315,10 @@
 				5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */,
 				5F76A59B2C040378001A7496 /* SplashScreen.swift */,
 				5F7A6A902C028613009922FF /* View+Ext.swift */,
+				5FC76F392C06A3FC002C1944 /* DateFormatting.swift */,
 				5F7A6A8B2C027B48009922FF /* Dimensions.swift */,
 				5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */,
 				5FE68A812C020BB50011C6C4 /* Preview Content */,
-				5FC76F392C06A3FC002C1944 /* DateFormatting.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
