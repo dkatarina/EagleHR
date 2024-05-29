@@ -11,6 +11,10 @@ protocol GetRequest : NetworkRequest {
 
 extension GetRequest {
     func execute() -> AnyPublisher<NetworkResponse, Error> {
+        _execute()
+    }
+    
+    func _execute() -> AnyPublisher<NetworkResponse, Error> {
         do {
             let request = try createRequest(httpMethod: .get)
             return execute(request)

@@ -11,6 +11,18 @@ struct GetUserInfoRequest : GetRequest, Authorized {
     var url: String {
         "https://api-assigment.eaglelab.com/v1/users/profile"
     }
+
+    private let authenticationManager = AuthenticationManager.shared
+
+    func execute() -> AnyPublisher<Response, Error> {
+        _execute()
+            .handleEvents(receiveOutput: storeAvailablePto)
+            .eraseToAnyPublisher()
+    }
+
+    private func storeAvailablePto(response: GetUserInfoRequest.NetworkResponse) {
+        authenticationManager.saveAvailablePto(response.pto)
+    }
 }
 
 extension GetUserInfoRequest {
@@ -25,6 +37,8 @@ extension GetUserInfoRequest {
         let phoneNumber: String
         let college: String
 
+        let pto: Int
+
         enum CodingKeys: String, CodingKey {
             case firstName
             case lastName
@@ -35,6 +49,8 @@ extension GetUserInfoRequest {
             case address
             case phoneNumber
             case college = "degree"
+
+            case pto
         }
     }
 }

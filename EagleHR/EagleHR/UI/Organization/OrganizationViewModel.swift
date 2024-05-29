@@ -13,7 +13,10 @@ extension OrganizationView {
 
         var state = ViewState()
 
-        init() {
+        func fetchData() {
+            if case .success(_) = state.dataResult {
+                return
+            }
             networkManager.requests.getAllUsers.execute()
                 .receive(on: DispatchQueue.main)
                 .sink(

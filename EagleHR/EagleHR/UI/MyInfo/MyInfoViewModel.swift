@@ -15,7 +15,11 @@ extension MyInfoView {
 
         var state = ViewState()
 
-        init() {
+        func fetchData() {
+            if case .success(_) = state.dataResult {
+                return
+            }
+
             networkManager.requests.getUserInfo.execute()
                 .receive(on: DispatchQueue.main)
                 .sink(
@@ -55,7 +59,7 @@ extension MyInfoView {
                 college: updateFields[.college]!.value
             )
 
-            networkManager.requests.updateUserInfo.execute(body: requestBody)
+            networkManager.requests.updateUserInfo.execute(requestBody)
                 .receive(on: DispatchQueue.main)
                 .sink(
                     receiveCompletion: { [weak self] completion in

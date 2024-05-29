@@ -17,5 +17,6 @@ class NetworkManager {
         let getUserInfo = GetUserInfoRequest()
         let updateUserInfo = UpdateUserInfoRequest()
         let getAllUsers = GetAllUsersRequest()
+        let getDaysUsage = GetDaysUsageRequest()
     }
 }

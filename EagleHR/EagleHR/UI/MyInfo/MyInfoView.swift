@@ -46,26 +46,27 @@ struct MyInfoView: View {
                     isEnabled: viewModel.state.isSaveChangesEnabled,
                     action: viewModel.updateInfo)
                 .padding(.vertical, Dimensions.Spacing.standard)
-            }.alert(
-                isPresented: $viewModel.state.isErrorDialogShown,
-                error: viewModel.state.error
-            ) {
-                Button("OK", role: .cancel) {}
-            }
-            .alert(
-                "Logout",
-                isPresented: $viewModel.state.isForceLogoutDialogShown
-            ) {
-                Button("Ok", role: .destructive) {
-                    viewModel.logout()
-                }
-            } message: {
-                Text("Please login again due to email change.")
             }
             if (viewModel.state.isProgressViewShown) {
                 OverlayProgressView()
             }
+        }.alert(
+            isPresented: $viewModel.state.isErrorDialogShown,
+            error: viewModel.state.error
+        ) {
+            Button("OK", role: .cancel) {}
         }
+        .alert(
+            "Logout",
+            isPresented: $viewModel.state.isForceLogoutDialogShown
+        ) {
+            Button("Ok", role: .destructive) {
+                viewModel.logout()
+            }
+        } message: {
+            Text("Please login again due to email change.")
+        }
+        .onAppear(perform: viewModel.fetchData)
     }
 }
 

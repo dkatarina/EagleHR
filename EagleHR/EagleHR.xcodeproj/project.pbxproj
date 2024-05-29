@@ -50,6 +50,11 @@
 		5FC76F362C06A0DB002C1944 /* OrganizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F352C06A0DB002C1944 /* OrganizationData.swift */; };
 		5FC76F382C06A238002C1944 /* GetAllUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F372C06A238002C1944 /* GetAllUsersRequest.swift */; };
 		5FC76F3A2C06A3FC002C1944 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F392C06A3FC002C1944 /* DateFormatting.swift */; };
+		5FC76F3C2C06BC91002C1944 /* GetDaysUsageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F3B2C06BC91002C1944 /* GetDaysUsageRequest.swift */; };
+		5FC76F3E2C06BE42002C1944 /* UsedDaysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F3D2C06BE42002C1944 /* UsedDaysViewModel.swift */; };
+		5FC76F412C06C02F002C1944 /* UsedDaysState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F402C06C02F002C1944 /* UsedDaysState.swift */; };
+		5FC76F432C06C078002C1944 /* UsedDaysData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F422C06C078002C1944 /* UsedDaysData.swift */; };
+		5FC76F452C078909002C1944 /* LeaveUsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC76F442C078909002C1944 /* LeaveUsageView.swift */; };
 		5FE68A7C2C020BB40011C6C4 /* EagleHRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */; };
 		5FE68A802C020BB50011C6C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */; };
 		5FE68A832C020BB50011C6C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE68A822C020BB50011C6C4 /* Preview Assets.xcassets */; };
@@ -96,6 +101,11 @@
 		5FC76F352C06A0DB002C1944 /* OrganizationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationData.swift; sourceTree = "<group>"; };
 		5FC76F372C06A238002C1944 /* GetAllUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllUsersRequest.swift; sourceTree = "<group>"; };
 		5FC76F392C06A3FC002C1944 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
+		5FC76F3B2C06BC91002C1944 /* GetDaysUsageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDaysUsageRequest.swift; sourceTree = "<group>"; };
+		5FC76F3D2C06BE42002C1944 /* UsedDaysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedDaysViewModel.swift; sourceTree = "<group>"; };
+		5FC76F402C06C02F002C1944 /* UsedDaysState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedDaysState.swift; sourceTree = "<group>"; };
+		5FC76F422C06C078002C1944 /* UsedDaysData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedDaysData.swift; sourceTree = "<group>"; };
+		5FC76F442C078909002C1944 /* LeaveUsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveUsageView.swift; sourceTree = "<group>"; };
 		5FE68A782C020BB40011C6C4 /* EagleHR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleHR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE68A7B2C020BB40011C6C4 /* EagleHRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleHRApp.swift; sourceTree = "<group>"; };
 		5FE68A7F2C020BB50011C6C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +134,7 @@
 				5FC76F262C064ED0002C1944 /* GetUserInfoRequest.swift */,
 				5FC76F282C064EDE002C1944 /* UpdateUserInfoRequest.swift */,
 				5FC76F372C06A238002C1944 /* GetAllUsersRequest.swift */,
+				5FC76F3B2C06BC91002C1944 /* GetDaysUsageRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -218,7 +229,9 @@
 		5F7A6A8A2C02293B009922FF /* UsedDays */ = {
 			isa = PBXGroup;
 			children = (
+				5FC76F3F2C06C023002C1944 /* Models */,
 				5F76A5BA2C04CE10001A7496 /* UsedDaysView.swift */,
+				5FC76F3D2C06BE42002C1944 /* UsedDaysViewModel.swift */,
 			);
 			path = UsedDays;
 			sourceTree = "<group>";
@@ -231,6 +244,7 @@
 				5F76A5842C039F33001A7496 /* OverlayProgressView.swift */,
 				5F76A5AB2C041C85001A7496 /* AnimatedImage.swift */,
 				5F76A5C12C0542AD001A7496 /* BackgroundImage.swift */,
+				5FC76F442C078909002C1944 /* LeaveUsageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -240,6 +254,15 @@
 			children = (
 				5FC76F332C06A075002C1944 /* OrganizationState.swift */,
 				5FC76F352C06A0DB002C1944 /* OrganizationData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5FC76F3F2C06C023002C1944 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5FC76F402C06C02F002C1944 /* UsedDaysState.swift */,
+				5FC76F422C06C078002C1944 /* UsedDaysData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,12 +418,15 @@
 				5FC76F292C064EDE002C1944 /* UpdateUserInfoRequest.swift in Sources */,
 				5F76A5D42C063523001A7496 /* LoginViewState.swift in Sources */,
 				5F76A5C02C0539BA001A7496 /* NavigationViewModel.swift in Sources */,
+				5FC76F3C2C06BC91002C1944 /* GetDaysUsageRequest.swift in Sources */,
 				5F76A5952C03C29D001A7496 /* ApiError.swift in Sources */,
 				5FC76F312C06A025002C1944 /* OrganizationViewModel.swift in Sources */,
 				5F7A6A8F2C02809B009922FF /* InputTextField.swift in Sources */,
 				5F76A59A2C03F334001A7496 /* AuthenticationManager.swift in Sources */,
 				5F76A5852C039F33001A7496 /* OverlayProgressView.swift in Sources */,
+				5FC76F3E2C06BE42002C1944 /* UsedDaysViewModel.swift in Sources */,
 				5F76A5BD2C04CE33001A7496 /* OrganizationView.swift in Sources */,
+				5FC76F412C06C02F002C1944 /* UsedDaysState.swift in Sources */,
 				5F76A5932C03BFE3001A7496 /* NetworkRequest.swift in Sources */,
 				5F76A5982C03EB27001A7496 /* KeychainManager.swift in Sources */,
 				5FC76F272C064ED0002C1944 /* GetUserInfoRequest.swift in Sources */,
@@ -423,7 +449,9 @@
 				5F76A5D02C06222D001A7496 /* MyInfoData.swift in Sources */,
 				5F76A59C2C040378001A7496 /* SplashScreen.swift in Sources */,
 				5FC76F2F2C0696E9002C1944 /* PatchRequest.swift in Sources */,
+				5FC76F432C06C078002C1944 /* UsedDaysData.swift in Sources */,
 				5F76A57D2C037D9F001A7496 /* InputValidator.swift in Sources */,
+				5FC76F452C078909002C1944 /* LeaveUsageView.swift in Sources */,
 				5F76A5D22C0626F0001A7496 /* MyInfoState.swift in Sources */,
 				5FC76F382C06A238002C1944 /* GetAllUsersRequest.swift in Sources */,
 				5FC76F342C06A075002C1944 /* OrganizationState.swift in Sources */,

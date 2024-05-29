@@ -8,10 +8,14 @@ import Combine
 protocol PostRequest<RequestBody> : NetworkRequest {
     associatedtype RequestBody: Encodable
 
-    func execute(body: RequestBody) -> AnyPublisher<NetworkResponse, Error>
+    func execute(_ body: RequestBody) -> AnyPublisher<NetworkResponse, Error>
 }
 
 extension PostRequest {
+    func execute(_ body: RequestBody) -> AnyPublisher<NetworkResponse, Error> {
+        _execute(body)
+    }
+
     func _execute(_ body: RequestBody) -> AnyPublisher<NetworkResponse, Error> {
         do {
             let request = try createRequest(body)

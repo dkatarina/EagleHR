@@ -49,16 +49,16 @@ struct LoginView: View {
                 ).padding(.top, Dimensions.Spacing.standard)
                 Spacer()
             }
-            .padding()
+            .padding(Dimensions.Spacing.margins)
+            OverlayProgressView()
+                .hidden(!viewModel.state.isProgressViewShown)
+        }.background(BackgroundImage(opacity: 0.3))
             .alert(
                 isPresented: $viewModel.state.isErrorDialogShown,
                 error: viewModel.state.error
             ) {
                 Button("OK", role: .cancel) {}
             }
-            OverlayProgressView()
-                .hidden(!viewModel.state.isProgressViewShown)
-        }.background(BackgroundImage(opacity: 0.3))
     }
 }
 

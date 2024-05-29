@@ -44,16 +44,16 @@ struct OrganizationView: View {
             }.scrollContentBackground(.hidden)
                 .listStyle(.insetGrouped)
                 .listSectionSpacing(Dimensions.Spacing.standard)
-                .alert(
-                    isPresented: $viewModel.state.isErrorDialogShown,
-                    error: viewModel.state.error
-                ) {
-                    Button("OK", role: .cancel) {}
-                }
             if (viewModel.state.isProgressViewShown) {
                 OverlayProgressView()
             }
+        }.alert(
+            isPresented: $viewModel.state.isErrorDialogShown,
+            error: viewModel.state.error
+        ) {
+            Button("OK", role: .cancel) {}
         }
+        .onAppear(perform: viewModel.fetchData)
     }
 }
 

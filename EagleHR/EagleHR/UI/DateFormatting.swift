@@ -6,10 +6,10 @@ import Foundation
 
 enum DateFormatting {
     static func toUserFriendlyDateFormat(_ dateString: String) -> String {
-        var userFriendlyDateFormatter = DateFormatter()
+        let userFriendlyDateFormatter = DateFormatter()
         userFriendlyDateFormatter.dateFormat = "dd/mm/yyyy"
 
-        var isoDateFormatter = DateFormatter()
+        let isoDateFormatter = DateFormatter()
         isoDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
 
         let date = isoDateFormatter.date(from: dateString)

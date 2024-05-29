@@ -6,7 +6,6 @@ import Foundation
 
 enum Dimensions {
     static let minTouchTarget = 44.0
-    
     static let splashScreenIconSize = 250.0
 
     static let fieldCornerRadius = 10.0
@@ -19,6 +18,7 @@ enum Dimensions {
     static let buttonShadowRadius = 4.0
 
     enum Spacing {
+        static let margins = 16.0
         static let small = 10.0
         static let standard = 20.0
         static let medium = 40.0
